@@ -28,9 +28,23 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
-gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
-gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
+gem 'inherited_resources'
+gem 'activeadmin'
 gem 'formtastic', '~> 3.0'
+
+# Use SCSS for stylesheets
+gem 'sass-rails'
+#
+# # Use Uglifier as compressor for JavaScript assets
+gem 'uglifier'
+#
+# # Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
+
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Reataurant controller
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :update, :destroy]
 
@@ -10,7 +13,7 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1
   def show
-    render json: @restaurant
+    render json: @restaurant, include: 'dishes'
   end
 
   # POST /restaurants
@@ -39,6 +42,7 @@ class RestaurantsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurant
       @restaurant = Restaurant.find(params[:id])
